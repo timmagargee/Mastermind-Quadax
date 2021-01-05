@@ -6,6 +6,8 @@ namespace Mastermind
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Welcome to Mastermind there is a secret code that is 4 digits long that contains only numbers 1-6);
+            Console.WriteLine("You will have 10 attempts to guess the code and each attempt must be 4 consequtive digits (####) each 1-6);
             var rand = new Random();
             int[] ans = new int[4] {rand.Next(1,7), rand.Next(1, 7), rand.Next(1, 7) , rand.Next(1, 7)};
             bool isCorrect = false;
@@ -17,7 +19,7 @@ namespace Mastermind
                 {
                     Console.WriteLine("Attempt "+ i + "/10. Enter your guess:");
                     int guess = Convert.ToInt32(Console.ReadLine());
-                    Console.WriteLine("guess: " + guess);
+                    Console.WriteLine("Guess: " + guess);
                     if (guess > 6666 || guess < 1000)
                     {
                         throw new ArithmeticException();
